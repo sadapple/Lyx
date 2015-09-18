@@ -1,0 +1,817 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Programming Notes
+\end_layout
+
+\begin_layout Author
+Chuan Liu
+\end_layout
+
+\begin_layout Section*
+3.20.
+ R
+\end_layout
+
+\begin_layout Standard
+1) Vectors have three properties: typeof() (what it is), length() (how long
+ it is) and attributes() (additional arbitrary metadata).
+ The most common attribute is names().
+\end_layout
+
+\begin_layout Standard
+2) Each type of vector comes with an as.* coercion function and an is.* testing
+ function.
+ But beware.
+ 
+\color blue
+For historical reasons, is.vector() returns TRUE only if the object is a
+ vector with no attributes apart from names.
+ Use is.atomic(x) || is.list(x) to test if an object is actually a vector.
+\end_layout
+
+\begin_layout Standard
+3) Given a vector, you can determine its type with typeof(), or with a specific
+ test: is.character(), is.double(), is.integer(), is.logical(), or, more generally,
+ is.atomic().
+\end_layout
+
+\begin_layout Standard
+4) is.numeric() is a general test for the "numberliness" of a vector.
+ It is not a specific test for double vectors, which are often called numeric.
+ It returns TRUE for integers
+\end_layout
+
+\begin_layout Standard
+5) Lists are sometimes called recursive vectors, because a list can contain
+ other lists.
+ This makes them fundamentally different from atomic vectors.
+\end_layout
+
+\begin_layout Standard
+Eg.
+\end_layout
+
+\begin_layout Standard
+x <- list(list(list(list()))) 
+\end_layout
+
+\begin_layout Standard
+str(x)
+\end_layout
+
+\begin_layout Standard
+6) unlist()
+\end_layout
+
+\begin_layout Standard
+x <- list(1:3, "a", c(T, F, T), c(2.3, 5.9))
+\end_layout
+
+\begin_layout Standard
+unlist(x)
+\end_layout
+
+\begin_layout Standard
+6) Why is 1 == "1" true? Why is -1 < 0 true? Why is "one" < 2 false?
+\end_layout
+
+\begin_layout Standard
+Why is the default (and shortest) NA a logical vector? What's special about
+ logical vectors?
+\end_layout
+
+\begin_layout Standard
+What makes is.vector() and is.numeric() fundamentally different to is.list()
+ and is.character()?
+\end_layout
+
+\begin_layout Standard
+7) Missing values are specified with NA, which is a logical vector of length
+ 1.
+ NA will always be coerced to the correct type with c(), or you can create
+ NA's of specific types with NA_real_ (double), NA_integer_ and NA_character_.
+\end_layout
+
+\begin_layout Standard
+8) The dimension attribute can also be set on lists to make list-matrices
+ or list-arrays
+\end_layout
+
+\begin_layout Standard
+l <- list(1:3, "a", TRUE, 1.0) 
+\end_layout
+
+\begin_layout Standard
+dim(l) <- c(2, 2)
+\end_layout
+
+\begin_layout Standard
+9) Beware the default behaviour of data.frame().
+ By default it converts strings into factors.
+ Use stringAsFactors = FALSE to suppress this behaviour
+\end_layout
+
+\begin_layout Standard
+10) You can coerce an object to a data frame with as.data.frame():
+\end_layout
+
+\begin_layout Standard
+a vector will yield a one-column data frame a list will yield one column
+ for each element; it's an error if they're not all the same length a matrix
+ will yield a data frame with the same number of columns
+\end_layout
+
+\begin_layout Standard
+11) 
+\color blue
+The conversion rules for cbind() are complicated and best avoided by ensuring
+ all inputs are of the same type.
+\end_layout
+
+\begin_layout Subsection*
+Coersion
+\end_layout
+
+\begin_layout Standard
+1) When a logical vector is coerced to double or integer, TRUE becomes 1
+ and FALSE becomes 0.
+ This is very useful in conjunction with sum() and mean()
+\end_layout
+
+\begin_layout Standard
+2) Coercion often also happens automatically.
+ Most mathematical functions (+, log, abs, etc.) will coerce to a double
+ or integer, and most logical operations (&, |, any, etc) will coerce to
+ a logical.
+ You will usually get a warning message if the coercion might lose information.
+ If confusion is likely, it's better to explicitly coerce.
+\end_layout
+
+\begin_layout Subsection*
+c()
+\end_layout
+
+\begin_layout Standard
+1) c() will combine several lists into one.
+ If given a combination of atomic vectors and lists, c() will coerce the
+ vectors to list before combining them.
+ 
+\end_layout
+
+\begin_layout Standard
+eg.
+ 
+\end_layout
+
+\begin_layout Standard
+x <- list(list(1, 2), c(3, 4)) 
+\end_layout
+
+\begin_layout Standard
+y <- c(list(1, 2), c(3, 4))
+\end_layout
+
+\begin_layout Subsection*
+Attributes
+\end_layout
+
+\begin_layout Standard
+All objects can have arbitrary additional attributes.
+ These can be thought of as a named list (with unique names).
+ Attributes can be accessed individually with attr() or all at once (as
+ a list) with attributes().
+\end_layout
+
+\begin_layout Standard
+By default, most attributes are lost when modifying a vector.
+\end_layout
+
+\begin_layout Standard
+The exceptions are for the most common attributes:
+\end_layout
+
+\begin_layout Standard
+names(), character vector of element names class(), used to implement the
+ S3 object system, described in the next section dim(), used to turn vectors
+ into high-dimensional structures You should always get and set these attributes
+ with their accessor functions: use names(x), class(x) and dim(x), not attr(x,
+ "names"), attr(x, "class"), and attr(x, "dim").
+\end_layout
+
+\begin_layout Subsection*
+Factors
+\end_layout
+
+\begin_layout Standard
+A factor is a vector that can contain only predefined values.
+ It is R's structure for dealing with qualitative data.
+ A factor is not an atomic vector, but it's built on top of an integer vector
+ using an S3 class.
+ Factors have two key attributes: their class(), "factor", which controls
+ their behaviour; and their levels(), the set of allowed values.
+\end_layout
+
+\begin_layout Standard
+1) While factors look (and often behave) like character vectors,
+\emph on
+ they are actually integers under the hood and you need to be careful when
+ treating them like strings
+\emph default
+.
+ Some string methods (like gsub() and grepl()) will coerce factors to strings,
+ while others (like nchar()) will throw an error, and still others (like
+ c()) will use the underlying integer IDs.
+ For this reason, it's usually best to explicitly convert factors to strings
+ when modifying their levels.
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+Factors are useful when you know the possible values a variable may take,
+ even if you don't see all values in a given dataset.
+
+\color inherit
+ Using a factor instead of a character vector makes it obvious when some
+ groups contain no observations:
+\end_layout
+
+\begin_layout Standard
+sex_char <- c("m", "m", "m") 
+\end_layout
+
+\begin_layout Standard
+sex_factor <- factor(sex_char, levels = c("m", "f"))
+\end_layout
+
+\begin_layout Standard
+table(sex_char) 
+\end_layout
+
+\begin_layout Standard
+table(sex_factor)
+\end_layout
+
+\begin_layout Standard
+2) 
+\color blue
+Sometimes when a data frame is read directly from a file, a column you had
+ thought would produce a numeric vector instead produces a factor, with
+ the numbers appearing in the levels.
+ This is caused by a non-numeric value in the column, often a missing value
+ encoded in a special way like .
+ or -.
+ To remedy the situation you will need to coerce the vector from a factor
+ to character, and then from character to numeric.
+ (Be sure to check for missing values after this process.) Of course, a much
+ better plan is to discover and fix what caused the problem in the first
+ place; using the na.strings argument to read.csv() is often a good place
+ to start.
+\end_layout
+
+\begin_layout Standard
+3) Unfortunately, most data loading functions in R automatically convert
+ character vectors to factors.
+ This is suboptimal, because there's no way for those functions to know
+ the set of all possible levels and their optimal order.
+ Instead, use the argument stringsAsFactors = FALSE to suppress this behaviour,
+ and then manually convert character vectors to factors using your knowledge
+ of the data.
+ A global option (options(stringsAsFactors = FALSE) is available to control
+ this behaviour, but it's not recommended - it makes it harder to share
+ your code, and it may have unexpected consequences when combined with other
+ code (either from packages, or code that you're source()ing).
+ Global options make code harder to understand, because they increase the
+ number of lines you need to read to understand what a function is doing.
+ In early versions of R, there was a memory advantage to using factors;
+ that is no longer the case.
+\end_layout
+
+\begin_layout Subsection*
+Data Frame
+\end_layout
+
+\begin_layout Standard
+When combining column-wise, only the number of rows needs to match, and
+ rownames are ignored.
+ When combining row-wise, the column names must match.
+ If you want to combine data frames that may not have all the same variables,
+ use plyr::rbind.fill().
+\end_layout
+
+\begin_layout Standard
+It's a common mistake to try and create a data frame by cbind()ing vectors
+ together.
+ This doesn't work because cbind() will create a matrix unless one of the
+ arguments is already a data frame.
+ Instead use data.frame() directly.
+\end_layout
+
+\begin_layout Standard
+Since a data frame is a list of vectors, it is possible for a data frame
+ to have a column that is a list:
+\end_layout
+
+\begin_layout Standard
+df <- data.frame(x = 1:3) 
+\end_layout
+
+\begin_layout Standard
+df$y <- list(1:2, 1:3, 1:4) 
+\end_layout
+
+\begin_layout Standard
+df
+\end_layout
+
+\begin_layout Standard
+However, when a list is given to data.frame(), it tries to put each item
+ of the list into its own column, so this fails:
+\end_layout
+
+\begin_layout Standard
+data.frame(x = 1:3, y = list(1:2, 1:3, 1:4))
+\end_layout
+
+\begin_layout Standard
+A workaround is to use I() which causes data.frame() to treat the list as
+ one unit:
+\end_layout
+
+\begin_layout Standard
+dfl <- data.frame(x = 1:3, y = I(list(1:2, 1:3, 1:4))) 
+\end_layout
+
+\begin_layout Standard
+str(dfl)
+\end_layout
+
+\begin_layout Standard
+Caution: 
+\color blue
+Use list and array columns with caution: many functions that work with data
+ frames assume that all columns are atomic vectors.
+\end_layout
+
+\begin_layout Section*
+3.21.
+ R Vocabulary
+\end_layout
+
+\begin_layout Standard
+Basics:
+\end_layout
+
+\begin_layout Standard
+# Operator and Assignment
+\end_layout
+
+\begin_layout Standard
+%in% , match
+\end_layout
+
+\begin_layout Standard
+subset
+\end_layout
+
+\begin_layout Standard
+with
+\end_layout
+
+\begin_layout Standard
+asign, get
+\end_layout
+
+\begin_layout Standard
+# Basic Math
+\end_layout
+
+\begin_layout Standard
+floor, ceiling, trunc, round, signif
+\end_layout
+
+\begin_layout Standard
+cummax, cummin, cumprod, cumsum
+\end_layout
+
+\begin_layout Standard
+pmin, pmax, range, rle, rev
+\end_layout
+
+\begin_layout Standard
+# Functions
+\end_layout
+
+\begin_layout Standard
+missing, on.exit, return, invisible
+\end_layout
+
+\begin_layout Standard
+# Logical and sets
+\end_layout
+
+\begin_layout Standard
+xor, all, any
+\end_layout
+
+\begin_layout Standard
+intersect, union, setdiff, setequal
+\end_layout
+
+\begin_layout Standard
+which
+\end_layout
+
+\begin_layout Standard
+# automatic coersion rules char>numeric>logical
+\end_layout
+
+\begin_layout Standard
+length, dim, ncol, nrow 
+\end_layout
+
+\begin_layout Standard
+cbind, rbind names, colnames, rownames
+\end_layout
+
+\begin_layout Standard
+t, diag 
+\end_layout
+
+\begin_layout Standard
+sweep 
+\end_layout
+
+\begin_layout Standard
+as.matrix, data.matrix
+\end_layout
+
+\begin_layout Standard
+# Making vectors 
+\end_layout
+
+\begin_layout Standard
+c 
+\end_layout
+
+\begin_layout Standard
+rep, rep_len seq, seq_len, seq_along 
+\end_layout
+
+\begin_layout Standard
+rev 
+\end_layout
+
+\begin_layout Standard
+sample 
+\end_layout
+
+\begin_layout Standard
+choose, factorial, combn 
+\end_layout
+
+\begin_layout Standard
+(is/as).(character/numeric/logical/...) 
+\end_layout
+
+\begin_layout Standard
+# Lists & data.frames 
+\end_layout
+
+\begin_layout Standard
+list, unlist 
+\end_layout
+
+\begin_layout Standard
+data.frame, as.data.frame 
+\end_layout
+
+\begin_layout Standard
+split 
+\end_layout
+
+\begin_layout Standard
+expand.grid
+\end_layout
+
+\begin_layout Standard
+Return 
+\begin_inset Quotes eld
+\end_inset
+
+A data frame containing one row for each combination of the supplied factors.
+ The first factors vary fastest.
+ The columns are labelled by the factors if these are supplied as named
+ arguments or named components of a list.
+ The row names are 'automatic'.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+# Control flow 
+\end_layout
+
+\begin_layout Standard
+if, &&, || (short circuiting) 
+\end_layout
+
+\begin_layout Standard
+for, while 
+\end_layout
+
+\begin_layout Standard
+next, break 
+\end_layout
+
+\begin_layout Standard
+switch 
+\end_layout
+
+\begin_layout Standard
+ifelse
+\end_layout
+
+\begin_layout Section*
+3.22.
+ Subsetting
+\end_layout
+
+\begin_layout Standard
+Subsetting is hard to learn because you need to master a number of interrelated
+ concepts:
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+the three subsetting operators 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+the six types of subsetting 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+the important difference in subsetting behaviour for different objects (e.g.
+ vectors, lists, factors, matrices and data frames) 
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+the use of subsetting in conjunction with assignment
+\end_layout
+
+\begin_layout Standard
+S3 objects S3 objects are made up of atomic vectors, arrays and lists, 
+\color blue
+so 
+\emph on
+you can always pull apart an S3 object using the techniques described above
+ and the knowledge you gain from str()
+\emph default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+S4 objects There are also two additional subsetting operators that are needed
+ for S4 objects: @ (equivalent to $), and slot() (equivalent to [[).
+ @ is more restrictive than $ in that it will return an error if the slot
+ does not exist.
+ These are described in more detail in the OO field guide.
+\end_layout
+
+\begin_layout Enumerate
+By default, [ will simplify the results to the lowest possible dimensionality.
+ See simplifying vs.
+ preserving subsetting for how to avoid this.
+\end_layout
+
+\begin_layout Enumerate
+You can also subset higher-dimensional data structures with an integer matrix
+ (or, if named, a character matrix).
+ Each row in the matrix specifies the location of a value, with each column
+ corresponding to a dimension in the array being subsetted.
+ 
+\emph on
+(Don't know whether this applies to list.)
+\end_layout
+
+\begin_layout Enumerate
+Data frames possess the characteristics of both lists and matrices: if you
+ subset with a single vector, they behave like lists; if you subset with
+ two vectors, they behave like matrices.
+\end_layout
+
+\begin_layout Enumerate
+Apart from [, there are two other subsetting operators: [[ and $.
+ [[ is similar to [, except it can only return a single value, and it allows
+ you to pull pieces out of a list.
+ When combined with character subsetting, $ is a useful shorthand for [[.
+\end_layout
+
+\begin_layout Enumerate
+You need [[ when working with lists.
+ This is because [ only returns a list - it never gives you the contents
+ of the list.
+ To do that, use [[.
+ Because it can return only a single value, you must use [[ with either
+ a single positive integer or a string
+\end_layout
+
+\begin_layout Enumerate
+Because data frames are lists of columns, you can use [[ to extract a column
+ from data frames: mtcars[[1]], mtcars[["cyl"]].
+\end_layout
+
+\begin_layout Enumerate
+S3 and S4 objects can override the standard behaviour of [ and [[ so they
+ behave differently for different types of objects.
+ The key difference is usually how you select between simplifying or preserving
+ behaviours, and what the default is.
+\end_layout
+
+\begin_layout Enumerate
+$ is a shorthand operator, where x$y is equivalent to x[["y", exact = FALSE]].
+ It's commonly used to access columns of a dataframe, e.g.
+ mtcars$cyl, diamonds$carat.
+\end_layout
+
+\begin_layout Enumerate
+One common mistake with $ is to try and use it when you have the name of
+ a column stored in a variable:
+\end_layout
+
+\begin_layout Subsection*
+Simplifying or Preserving subsetting
+\end_layout
+
+\begin_layout Standard
+It's important to understand the distinction between simplifying and preserving
+ subsetting.
+ Simplifying subsets returns the simplest possible data structure that can
+ represent the output, and is useful interactively because it usually gives
+ you what you want.
+ Preserving subsetting keeps the structure of the output the same as the
+ input, and is generally better for programming because the result will
+ always be the same type.
+ Omitting drop = FALSE when subsetting matrices and data frames is one of
+ the most common sources of programming errors.
+ (It will work for your test cases, but then someone will pass in a single
+ column data frame and it will fail in an unexpected and unclear way).
+\end_layout
+
+\begin_layout Subsection*
+Subsetting and Assignment
+\end_layout
+
+\begin_layout Standard
+All subsetting operators can be combined with assignment to modify selected
+ values of the input vector.
+\end_layout
+
+\begin_layout Itemize
+Indexing with a blank can be useful in conjunction with assignment because
+ it will preserve the original object class and structure.
+ 
+\end_layout
+
+\begin_layout Itemize
+With lists, you can use subsetting + assignment + NULL to remove components
+ from a list.
+ To add a literal NULL to a list, use [ and list(NULL).
+\end_layout
+
+\begin_layout Subsection*
+Application
+\end_layout
+
+\begin_layout Standard
+Many of these basic techniques are wrapped up into more concise functions
+ (e.g.
+ subset(), merge(), plyr::arrange()), but it is useful to understand how
+ they are implemented with basic subsetting.
+ This will allow you to adapt to new situations that are not dealt with
+ by existing functions.
+\end_layout
+
+\begin_layout Enumerate
+Lookup tables (character subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Matching and merging by hand (integer subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Random samples/bootstrap (integer subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Ordering (integer subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Expanding aggregated counts (integer subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Removing columns from data frame (character subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Selecting rows based on a condition (logical subsetting)
+\end_layout
+
+\begin_layout Enumerate
+Boolean algebra vs sets (logical & integer subsetting)
+\end_layout
+
+\begin_layout Section*
+4.2.
+\end_layout
+
+\begin_layout Standard
+Check the arguments of a R func: args()
+\end_layout
+
+\begin_layout Standard
+Q: What does 
+\emph on
+\color blue
+lazy evaluation
+\emph default
+\color inherit
+ mean? What languages have this feature?
+\end_layout
+
+\end_body
+\end_document

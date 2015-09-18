@@ -1,0 +1,287 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Linux Notes
+\end_layout
+
+\begin_layout Author
+Sadapplelc
+\end_layout
+
+\begin_layout Section*
+4.20.
+ Search is a fundamental ability
+\end_layout
+
+\begin_layout Subsection*
+find function
+\end_layout
+
+\begin_layout Standard
+find+search path+option+argument
+\end_layout
+
+\begin_layout Standard
+Options are like : -user -group -ctime -type -size -name -perm.
+\end_layout
+
+\begin_layout Standard
+Could be used to search multiple locations
+\end_layout
+
+\begin_layout Subsection*
+Search command in the terminal
+\end_layout
+
+\begin_layout Standard
+C+r (reverse-i-search)
+\end_layout
+
+\begin_layout Standard
+history
+\end_layout
+
+\begin_layout Subsection*
+Job management in the terminal
+\end_layout
+
+\begin_layout Standard
+command+&: run command in the back
+\end_layout
+
+\begin_layout Standard
+C+z pause the process
+\end_layout
+
+\begin_layout Standard
+other func: jobs, bg, fg
+\end_layout
+
+\begin_layout Subsection*
+Expansion in the Shell
+\end_layout
+
+\begin_layout Standard
+echo * does not reveal hidden file.
+\end_layout
+
+\begin_layout Standard
+Command substitution egs: ls -l $(which cp), file $(ls /usr/bin/* | grep
+ zip)
+\end_layout
+
+\begin_layout Subsection*
+Managing the Processes
+\end_layout
+
+\begin_layout Standard
+ps, ps x, ps aux, pstree, top(you can even see the command name of a process
+ via this)
+\end_layout
+
+\begin_layout Standard
+To see all signals you can send: kill -l.
+\end_layout
+
+\begin_layout Section*
+4.24.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+gnome-open
+\emph default
+ command is really useful.
+\end_layout
+
+\begin_layout Standard
+In emacs, 
+\emph on
+C-x C-o
+\emph default
+ can be used to remove all blank lines around the current line.
+ Some others are like:
+\end_layout
+
+\begin_layout Standard
+M-
+\backslash
+ Delete spaces and tabs around point (delete-horizontal-space).
+ M-SPC Delete spaces and tabs around point, leaving one space (just-one-space).
+ M-^ Join two lines by deleting the intervening newline, and any indentation
+ following it (delete-indentation).
+\end_layout
+
+\begin_layout Subsection*
+Yanking Earlier Kills
+\end_layout
+
+\begin_layout Standard
+C-u 2 C-y is equivalent to C-y M-y.
+\end_layout
+
+\begin_layout Subsection*
+Note
+\end_layout
+
+\begin_layout Standard
+To use Unix well, you need to understand some of the 
+\emph on
+main design features
+\emph default
+.
+ 
+\emph on
+Its power comes from knowing how to make commands and programs interact
+ with each other
+\emph default
+, not just from treating each as a fixed black box.
+\end_layout
+
+\begin_layout Section*
+4.26.
+\end_layout
+
+\begin_layout Subsection*
+Emacs
+\end_layout
+
+\begin_layout Standard
+Wrap text up 
+\emph on
+M-q
+\end_layout
+
+\begin_layout Standard
+Comment Region 
+\emph on
+M-;
+\end_layout
+
+\begin_layout Subsection*
+5.4.
+\end_layout
+
+\begin_layout Standard
+Sys Commands:
+\end_layout
+
+\begin_layout Standard
+df, du -sh, free, top, lsb_release -a, ip addr
+\end_layout
+
+\begin_layout Standard
+Save a text file for the list of packages that have been installed:
+\end_layout
+
+\begin_layout Standard
+dpkg --get-selections | grep -v deinstall > ~/Desktop/packages
+\end_layout
+
+\begin_layout Section*
+5.6.
+\end_layout
+
+\begin_layout Standard
+File System Commands:
+\end_layout
+
+\begin_layout Standard
+ls/chmod/chown/rm/find/ln/cat/mount/mkdir/tar/gzip 
+\end_layout
+
+\begin_layout Standard
+Text Editing Commands:
+\end_layout
+
+\begin_layout Standard
+sed/awk/grep/tail/less/more
+\end_layout
+
+\begin_layout Standard
+Manangement Commands:
+\end_layout
+
+\begin_layout Standard
+ps/top/lsof/netstat/kill/tcpdump/iptables/dd
+\end_layout
+
+\begin_layout Section*
+10.18
+\end_layout
+
+\begin_layout Standard
+mkdir -p Creating directories and subdirectories in one step
+\end_layout
+
+\end_body
+\end_document

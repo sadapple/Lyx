@@ -1,0 +1,1069 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -2
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Title
+Statistical Learning Notes
+\end_layout
+
+\begin_layout Author
+Chuan Liu
+\end_layout
+
+\begin_layout Date
+
+\emph on
+\begin_inset Quotes eld
+\end_inset
+
+The journey of a thousand miles begins with one step.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+2014
+\end_layout
+
+\begin_layout Section*
+1.29.
+\end_layout
+
+\begin_layout Standard
+Question:
+\end_layout
+
+\begin_layout Standard
+1) How to compute the eigenvalues for a big matrix?
+\end_layout
+
+\begin_layout Standard
+2) When to apply the SVD decomposition?
+\end_layout
+
+\begin_layout Standard
+Note:
+\end_layout
+
+\begin_layout Standard
+1) In the exmaple of SVD, R has better precision, but takes more memory
+ and time.
+ But SAS tried to save the memory even though lose the precision.
+ 
+\end_layout
+
+\begin_layout Section*
+2.5.
+\end_layout
+
+\begin_layout Standard
+Question:
+\end_layout
+
+\begin_layout Standard
+1) How to obtain the centered data matrix via matrix operation?
+\end_layout
+
+\begin_layout Standard
+2) Refletion via matrix
+\end_layout
+
+\begin_layout Standard
+3) Comparison between Householder and Givens transformation.
+\end_layout
+
+\begin_layout Standard
+4) Choleski is basically another way to do square root.
+\end_layout
+
+\begin_layout Standard
+5) How to generate an arbitrary Multivariate Normal?
+\end_layout
+
+\begin_layout Section*
+2.6.
+\end_layout
+
+\begin_layout Standard
+1) For AR(2), although calculating 
+\begin_inset Formula $\gamma_{0},\gamma_{1}$
+\end_inset
+
+ is not easy, calculating 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+ is very each( since we have less parameters).
+\end_layout
+
+\begin_layout Section*
+2.12.
+\end_layout
+
+\begin_layout Standard
+1) Breakdown point and Efficienty for Robust Estimator
+\end_layout
+
+\begin_layout Standard
+2) Unduly 
+\end_layout
+
+\begin_layout Section*
+2.19.
+\end_layout
+
+\begin_layout Standard
+1) Cachy is the ratio of two independent normals.
+\end_layout
+
+\begin_layout Section*
+3.5.
+\end_layout
+
+\begin_layout Standard
+1) What is PLS? When do we prefer to do it? (Another name for PLS: 
+\color blue
+Projection to Latent Structures
+\color inherit
+)
+\end_layout
+
+\begin_layout Section*
+3.6.
+\end_layout
+
+\begin_layout Standard
+1) What is an ETS model? Relationship with ARIMA?
+\end_layout
+
+\begin_layout Section*
+3.12.
+\end_layout
+
+\begin_layout Standard
+1) How to interpret the alpha in the 
+\emph on
+bmi
+\emph default
+ example? How to make the quadratic term orthogonal to the linear term?
+\end_layout
+
+\begin_layout Section*
+3.25.
+\end_layout
+
+\begin_layout Subsection*
+Composite Gradient Descent Algorithm
+\end_layout
+
+\begin_layout Standard
+1) When do we use soft-thresholding function?
+\end_layout
+
+\begin_layout Standard
+2) What kind of algorithms have geometric convergence rate?
+\end_layout
+
+\begin_layout Standard
+3) k-sparse condition in high dimension
+\end_layout
+
+\begin_layout Standard
+4) What does support recovery mean in high dimension analysis
+\end_layout
+
+\begin_layout Subsection*
+Dynamic Modelling of Risk Neutral Density via Sequential Monte Carlo
+\end_layout
+
+\begin_layout Standard
+1) What is Risk Neutral Density?
+\end_layout
+
+\begin_layout Standard
+2) The Variance of a Monte Carlo estimates
+\end_layout
+
+\begin_layout Standard
+3) Importance Sampling, Sequential Importance Sampling
+\end_layout
+
+\begin_layout Section*
+3.27.
+\end_layout
+
+\begin_layout Standard
+1) How to combine the ARIMA and SARIMA model?
+\end_layout
+
+\begin_layout Standard
+2) Spurious Correlation phenomenon in (Seasonal) Random Walk Model
+\end_layout
+
+\begin_layout Section*
+3.28.
+ Need to know more about logistic regression
+\end_layout
+
+\begin_layout Standard
+1) How to interpret the residuals of the logistic regression?
+\end_layout
+
+\begin_layout Section*
+3.31.
+ 
+\end_layout
+
+\begin_layout Subsection*
+
+\emph on
+Why discriminant analysis?
+\end_layout
+
+\begin_layout Standard
+1) When the classes are well-separated, the parameter estimates for the
+ logistic regression model are surprisingly 
+\emph on
+unstable
+\emph default
+(?).
+ Linear discriminat analysis does not suffer from this problem.
+\end_layout
+
+\begin_layout Standard
+2) If n is small and the distribution of the predictors X is appromimately
+ normal in each of the classes, the linear discriminant model is again more
+ stable than the logistic regression.
+\end_layout
+
+\begin_layout Standard
+3) Linear discriminant analysis is popular when we have more than two response
+ classes, because it also provides low-dim views of the data.
+\end_layout
+
+\begin_layout Subsection*
+Discriminant score and discriminant function
+\end_layout
+
+\begin_layout Standard
+1) When there are K classes, linear discriminant analysis can be viewed
+ exactly in the K-1 dim plot.
+ Why? Because it essentially classifies to the closest centroid and they
+ span a K-1 dim plane.
+\end_layout
+
+\begin_layout Standard
+2) Caveats: Be careful about the training Error since we may be overfitting.
+\end_layout
+
+\begin_layout Standard
+3) We can change the threshold to produce different 
+\emph on
+False positive rates
+\emph default
+ and 
+\emph on
+False negative rates.
+ 
+\end_layout
+
+\begin_layout Standard
+3) ROC curve of a classifier and AUC(area under curve)
+\end_layout
+
+\begin_layout Subsection*
+Quadratic discriminant analysis and Naive Bayes
+\end_layout
+
+\begin_layout Standard
+1) Naive Bayes assumes features are independent in each class.
+ It's useful when p is large and so multivariate methods like QDA and even
+ LDA break down.
+\end_layout
+
+\begin_layout Standard
+2) Naive Bayes can be used for mixed feature vectors.
+\end_layout
+
+\begin_layout Standard
+3) The assumption of Naive Bayes seems very crude and it is very uselful
+ in high-dim problems.
+ What happens is we end up with quiet flattened and maybe biased estimates
+ for the prob, but in terms of classification, you just need to know which
+ prob is the largest to classify it, so you can tolerate quite a lot of
+ bias and still get good classification performance.
+ And what you get in return is much reduced variance from having to estimate
+ far fewer parameters.
+\end_layout
+
+\begin_layout Subsection*
+Logistic Reg Vs LDA
+\end_layout
+
+\begin_layout Standard
+For the two-class problem, they have the same form.
+ The diff is in how the parameters are estimated
+\end_layout
+
+\begin_layout Standard
+1) Logit Reg uses the conditional likelihood based on Pr(Y|X), this is known
+ as discriminative learning
+\end_layout
+
+\begin_layout Standard
+2) LDA uses the full likelihood based on Pr(X,Y), this is known as generative
+ learning
+\end_layout
+
+\begin_layout Standard
+3) Despite these diff, in practise the results are often very similar
+\end_layout
+
+\begin_layout Standard
+4) Note: Logit Reg can also fit quadratic boundaries like QDA, but explicitly
+ including quadratic terms in the model
+\end_layout
+
+\begin_layout Subsection*
+Summary
+\end_layout
+
+\begin_layout Standard
+1) Logit Reg is very popular for classification, especially when K=2
+\end_layout
+
+\begin_layout Standard
+2) LDA is useful when n is small, or the classes are well separated, and
+ the Gaussian assumps are reasonable.
+ Also when K>2
+\end_layout
+
+\begin_layout Standard
+3) NB is useful when p is large
+\end_layout
+
+\begin_layout Subsection*
+Two resampling Mehods: CV and Bootstrap
+\end_layout
+
+\begin_layout Standard
+Traing Error Vs Test Error, remember the trade off curve
+\end_layout
+
+\begin_layout Standard
+On prediction-error estimates
+\end_layout
+
+\begin_layout Standard
+1) Best solution: a large designated test set.
+ Often NA
+\end_layout
+
+\begin_layout Standard
+2) some methods make a mathematical adjustment to the training error rate
+ in order to estimate the test error rate.
+ Like Cp stat, AIC and BIC
+\end_layout
+
+\begin_layout Standard
+3) Another class of methods estimate the test error by holding out a subset
+ of the training observations from the fitting process, and then applyin
+ gthe learning method to those held out observations
+\end_layout
+
+\begin_layout Subsection*
+Validation-set approach
+\end_layout
+
+\begin_layout Standard
+1) The resulting validation-set error provides an estimate of the test error.
+ This is typically assessed using MSE for quatitative response and misclassifica
+tion rate for qualitative(discrete) response.
+\end_layout
+
+\begin_layout Standard
+2) Drawbacks: The test error can be highly variable, depending on precisely
+ which observations are included in the training set or not.
+ Moreover only a subset of the obs are used to fit the model.
+ These suggests the validation set error may 
+\emph on
+\color blue
+tend to overestimate
+\emph default
+\color inherit
+ the test error for the model fit on the entire data set.
+ Why?
+\end_layout
+
+\begin_layout Subsection*
+K-fold Cross-Validation
+\end_layout
+
+\begin_layout Standard
+1) How to choose K?
+\end_layout
+
+\begin_layout Standard
+2) When K=n yields LOOCV(leave one out CV), this is a nice special case
+ 
+\end_layout
+
+\begin_layout Standard
+3) Interpretation of the diagonal terms of the hat matrix
+\end_layout
+
+\begin_layout Standard
+4) LOOCV sometimes useful but typically doesn't shake up the data enough.
+ The estimates from each fold are highly correlated and hence their average
+ can have high variance(Why?)
+\end_layout
+
+\begin_layout Standard
+5) Picking K is also a bias-variance trade-off for prediction error.
+ A better choice is K=5 or 10
+\end_layout
+
+\begin_layout Subsection*
+Issues about CV
+\end_layout
+
+\begin_layout Standard
+1) The training set is not as big as the original set, this leads to a biased
+ upward prediction error(Why?)
+\end_layout
+
+\begin_layout Standard
+2) This bias is minimized when K=n(LOOCV), but this estimate has high variance
+\end_layout
+
+\begin_layout Standard
+5) K=5 or 10 provides a good compromise for this trade-off
+\end_layout
+
+\begin_layout Subsection*
+CV for classification problems
+\end_layout
+
+\begin_layout Subsection*
+CV, the right way and wrong way
+\end_layout
+
+\begin_layout Standard
+1) Do not fool CV by leaving out the first filtering step and giving it
+ a very cherry-picked set of predictors in the second step.
+ 
+\end_layout
+
+\begin_layout Standard
+2) The right way is to apply CV on both steps.
+\end_layout
+
+\begin_layout Subsection*
+Bootstrap(Pull yourself out from what you've got)
+\end_layout
+
+\begin_layout Standard
+Different from the term boostrap in CS field.k
+\end_layout
+
+\begin_layout Standard
+1) Sample the original data set with replacement
+\end_layout
+
+\begin_layout Standard
+2) In more complex data situations, figuring out the appropriate way to
+ generate bootstrap samples can require some thought.
+ Eg, if the data is a time series, we can't simply sample the observations
+ with replac.
+\end_layout
+
+\begin_layout Standard
+3) Figure out what part of the data is independent.
+ In time series, we could use block-bootstrap
+\end_layout
+
+\begin_layout Standard
+4) Primarily used to obtain sde of an estimate, also provides approximate
+ CI for a population parameter(How do we interpret the CI?), this is called
+ Bootstrap Percentile CI
+\end_layout
+
+\begin_layout Subsection*
+Can bootstrap estimate prediction error?
+\end_layout
+
+\begin_layout Standard
+1) In CV, each of the K validation folds is distinct from the other K-1
+ folds used for training.
+ There is no overlap, this is crucial for its success.
+\end_layout
+
+\begin_layout Standard
+2) To estimate prediction error using bootstrap, think about using each
+ bootstrap dataset as our training sample, and the original as our validation
+ sample.
+ But each bootstrap sample has significant overlap with the original.
+ About 2/3 of the original data points appear in each bootstrap sample(Can
+ you prove it?).
+ This will cause the bootstrap to seriously underestimate the true prediction
+ error(Why?).
+ The other way around(with original be training sample and bootstrap dataset
+ be validation sample is even worse.
+\end_layout
+
+\begin_layout Standard
+3) We could remove the overlap by only using predictions for those obs that
+ did not(by chance) occur in the current bootstrap sample.
+ But the method gets complicated, and in the end, CV provides a simpler
+ and more attractive way for estimating prediction error.
+\end_layout
+
+\begin_layout Subsection*
+Why consider alternatives to least squares?
+\end_layout
+
+\begin_layout Standard
+1) Prediction Accuracy
+\end_layout
+
+\begin_layout Standard
+2) Model Interpretability
+\end_layout
+
+\begin_layout Subsection*
+Three classes of Method
+\end_layout
+
+\begin_layout Standard
+1) Subset Selection
+\end_layout
+
+\begin_layout Standard
+2) Shrinkage(Regularization)
+\end_layout
+
+\begin_layout Standard
+3) Dimension Reduction
+\end_layout
+
+\begin_layout Standard
+Q: what is adjusted R square used for?
+\end_layout
+
+\begin_layout Subsection*
+Backward and Forward Stepwise Selection
+\end_layout
+
+\begin_layout Standard
+Backward requires that the number of samples n is larger than the number
+ of variables p so that the model can be fit.
+ In contrast, forward can be used even when n<p and so is the only viable
+ subset method when p is very large.
+\end_layout
+
+\begin_layout Subsection*
+Choosing the optimal model and Estimating test error
+\end_layout
+
+\begin_layout Standard
+1) RSS and R^2 are not suitable for selecting the best model among a collection
+ of models with diff number of predictors.
+ Then how to estimate test error?
+\end_layout
+
+\begin_layout Standard
+2) In the case of linear model with Gaussian errors, MLE and LS are the
+ same thing, and Cp and AIC are equivalent(prove).
+ But Cp is only available when n>p.
+\end_layout
+
+\begin_layout Standard
+3) BIC generally places a heavier penalty on models with many variables
+ and hence results in the selection of smaller models than Cp.
+\end_layout
+
+\begin_layout Standard
+4) A large value of adjusted R^2 indicates a model with a small test error.
+ But is pays a price for the inclusion of unnecessary variables in the model.
+ 
+\end_layout
+
+\begin_layout Standard
+5) CV procedure has an advantage relative to AIC, BIC, Cp and adjusted R^2,
+ in that it provides a direct estimate of the test error and doesn't require
+ an estimate of the error variance sigma^2.
+ It can also be used in a wider range of model selection tasks, even in
+ cases where it's hard to pinpoint the model df or hard to estimate the
+ error variance sigma^2.
+\end_layout
+
+\begin_layout Subsection*
+Shrinkage Method: Ridge and Lasso
+\end_layout
+
+\begin_layout Standard
+1) Selecting a good value for lambda is critical, CV is used for this.
+\end_layout
+
+\begin_layout Standard
+2) The standard LS coefficient estimates are 
+\emph on
+scale equaivariant.
+ 
+\emph default
+In contrast, the ridge reg coef estimates can change substantially when
+ multiplying a given predictor by a constant, due to the penalty part.
+ So it is best to apply ridge reg after standardizing the predictors.
+\end_layout
+
+\begin_layout Standard
+3) Lasso yields sparse models, Ridge yields dense model
+\end_layout
+
+\begin_layout Standard
+4) Comparing Lasso Vs Ridge, neither one would universally dominate the
+ other.
+ But under what situations would one outperform the other? In general one
+ might expect Lasso to perform better when the response is a function of
+ only a relatively small number of predictors.
+ However this is never known a priori for real data set.
+ CV can be used in order to determine which approach is better on a particular
+ data set.
+\end_layout
+
+\begin_layout Subsection*
+How to select the tuning parameter?
+\end_layout
+
+\begin_layout Standard
+Via CV, compute the CV error for a grid of lambda values
+\end_layout
+
+\begin_layout Subsection*
+Dimension Reduction Methods
+\end_layout
+
+\begin_layout Standard
+1) Dimension Reduction tends to constrain the estimated beta coef, it can
+ win in the bias variance trade-off.
+\end_layout
+
+\begin_layout Standard
+2) Why PLS? PCR directions are identified in an unsupervised way, or say
+ the response does not supervise the identification of the principle components.
+ Consequently, PCR suffers a drawback: no guarantee that the direction best
+ explained the predictors will also be the direction to use for predicting
+ the response.
+\end_layout
+
+\begin_layout Standard
+3) PLS identifies the features in a supervised way.
+ It attempts to find the directions that help explain both the response
+ and the predictors.
+\end_layout
+
+\begin_layout Standard
+4) PCR, PLS and Ridge Reg are related.
+ PCR could be viewed as a discrete version of Ridge Reg.
+\end_layout
+
+\begin_layout Standard
+5) more sparsity method: elastic net, etc
+\end_layout
+
+\begin_layout Subsection*
+Nonlinear methods
+\end_layout
+
+\begin_layout Standard
+1) Step functions, polynomials, splines
+\end_layout
+
+\begin_layout Standard
+2) For logit Reg CI, compute the upper and lower bound on logit scale and
+ then invert to get on probability scale
+\end_layout
+
+\begin_layout Standard
+3) Polynomials have notorious tail behavior, very bad for extrapolation.
+ 
+\end_layout
+
+\begin_layout Standard
+4) In R, y~poly(x,degree=n)
+\end_layout
+
+\begin_layout Standard
+5) Step functions creates a series of dummy variables representing each
+ group.
+ Also useful ways of creating interactions that are easy to interpret.
+ In R, cut(age, c(40,50,60)).
+\end_layout
+
+\begin_layout Section*
+4.2.
+ Tools for fitting nonlinear functions
+\end_layout
+
+\begin_layout Subsection*
+smoothing splines
+\end_layout
+
+\begin_layout Standard
+1) The solution is a natural cubic spline, with a knot at every unique value
+ of xi, the roughness penalty still controls the roughness via lambda.
+ It avoids the knot-selction issue, leaving a single lambda to be chosen.
+\end_layout
+
+\begin_layout Standard
+2) In R, use smooth.spline() to fit.
+\end_layout
+
+\begin_layout Standard
+3) The fitted values can be obtained via a linear transf from the original
+ observed y's and the 
+\emph on
+effective degrees of freedom
+\emph default
+ is the trace of that transf diagonal matrix.
+\end_layout
+
+\begin_layout Standard
+4) We can specify df rather than lambda! And the LOOCV error can be obtained
+ easily.
+\end_layout
+
+\begin_layout Subsection*
+GAM and Local Reg
+\end_layout
+
+\begin_layout Standard
+1) See loess() in R for local reg
+\end_layout
+
+\begin_layout Standard
+2) GAM allows for flexible nonlinearities in several variable but retains
+ the additive structure of linear models.
+ GAM could be fitted simply using natural splines.
+ Here the coef is not that interesting, the fitted funcs are.
+ Can also mix terms(some linear, some nonlinear) and use anova() to compare
+ models.
+ Smoothing splines or local reg can also be used.
+\end_layout
+
+\begin_layout Standard
+3) GAM for classification
+\end_layout
+
+\begin_layout Subsection*
+Trees
+\end_layout
+
+\begin_layout Standard
+Q: To form the tree.
+ How to split? When to stop?
+\end_layout
+
+\begin_layout Standard
+1) May produce good predictions on the training, but is likely to overfit
+ the data.
+ A small tree with fewer splits might lead to lower variance and better
+ interpretation at the cost of a little bias.
+\end_layout
+
+\begin_layout Standard
+2) A possible alternative is to grow the tree only so long as the decrease
+ in the RSS due to each split exceeds some threshold.
+ Best this approach is short-sighted.
+ Since a seemingly worthless split early on in the tree might be followed
+ by a very good split, which leads to a large reduction in RSS later on.
+\end_layout
+
+\begin_layout Standard
+3) Better strategy is to grow a very large tree and then prune it back in
+ order to obtain a subtree.
+ Cost Complexity Pruning is used to do this.
+\end_layout
+
+\begin_layout Subsection*
+Classification Trees
+\end_layout
+
+\begin_layout Standard
+For qualitative response.
+ Still use recursive binary splitting to grow a classification tree but
+ RSS is no longer suitable as a measure to split.
+\end_layout
+
+\begin_layout Subsection*
+Gini index and Deviance
+\end_layout
+
+\begin_layout Standard
+1) Gini is refered to as a measure of node purity, a small value indicates
+ that a node contains predominantly obs from a single class.
+\end_layout
+
+\begin_layout Standard
+2) An alternative to Gini is Cross-Entropy.
+\end_layout
+
+\begin_layout Subsection*
+Trees Vs Linear Models
+\end_layout
+
+\begin_layout Standard
+1) Pros for Trees:
+\end_layout
+
+\begin_layout Itemize
+Easy to explain(than the linear reg).
+\end_layout
+
+\begin_layout Itemize
+More closely mirror human decision-making than do the reg and classification.
+\end_layout
+
+\begin_layout Itemize
+Can be displayed graphically.
+\end_layout
+
+\begin_layout Itemize
+Can handle qualitative predictors without the need to create dummy variables.
+\end_layout
+
+\begin_layout Standard
+2) Cons for Trees:
+\end_layout
+
+\begin_layout Itemize
+Do not have the same level of predictive accuracy as Reg and Classification.
+\end_layout
+
+\begin_layout Itemize
+But by aggregating many decision trees, the predictive performance of trees
+ can be substantially improved.
+\end_layout
+
+\begin_layout Subsection*
+Bagging and Random Forest
+\end_layout
+
+\begin_layout Standard
+For bagging, the basic idea is generate bootstrap training data set, obtain
+ the prediction at each boostrap set than average the predictions.
+\end_layout
+
+\begin_layout Standard
+Q: Out of Bag Error Estimation
+\end_layout
+
+\begin_layout Standard
+Random forests improves over bagged trees by way of a small tweak that decorrela
+tes the trees.
+ This reduces the variance when we average the trees.
+\end_layout
+
+\begin_layout Subsection*
+Boosting
+\end_layout
+
+\begin_layout Standard
+In Tree context, Boosting works in a similar way like Bagging, except that
+ the trees are grown sequentially: each tree is grown using the information
+ from previous grown trees.
+\end_layout
+
+\begin_layout Section*
+9.23
+\end_layout
+
+\begin_layout Subsection*
+Cp and AIC
+\end_layout
+
+\begin_layout Standard
+Equivalent under normal assumption
+\end_layout
+
+\begin_layout Subsection*
+In-sample error and Average Optimism
+\end_layout
+
+\begin_layout Section*
+9.24
+\end_layout
+
+\begin_layout Standard
+Q: What does adaptive mean in the names of many stat models(like adaptive
+ lasso, etc)?
+\end_layout
+
+\begin_layout Standard
+What is ensemble learning?
+\end_layout
+
+\begin_layout Section*
+9.26 classification with missing data
+\end_layout
+
+\begin_layout Chapter
+2015
+\end_layout
+
+\begin_layout Section
+2.3 Case-control sampling(popular in epidemiology)
+\end_layout
+
+\begin_layout Standard
+Sampling more controls than cases reduces the variance of the parameter
+ estimates.
+ But after a ratio of about 5 to 1 the variance reduction flattens out.
+ 
+\end_layout
+
+\begin_layout Section
+2.8 Ch4 of ESL
+\end_layout
+
+\begin_layout Subsection
+Regression problem with intercept terms
+\end_layout
+
+\begin_layout Standard
+Note what good properties might we have when we try to invert the matrix
+ X'X.
+ 
+\end_layout
+
+\begin_layout Standard
+Q:
+\emph on
+What are the advantages to center the data when doing regression or other
+ stat analysis?
+\emph default
+ See 2nd paragraph on P104 of ESL.
+
+\size small
+ 
+\end_layout
+
+\begin_layout Subsection
+Polynomial Regression
+\end_layout
+
+\begin_layout Standard
+See last paragraph of P105.
+ Don't quite understand this part.
+\end_layout
+
+\begin_layout Section
+2.10
+\end_layout
+
+\begin_layout Subsection
+Simpson's Paradox
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\color blue
+When data from several sources are aggregated into a single table, there
+ is always the danger that unreported variables may cause a reversal of
+ the findings.
+ 
+\emph default
+\color inherit
+When comparing two medical treatments, the results often need to be adjusted
+ for the age, gender and sometimes health of the subject and other variables.
+\end_layout
+
+\begin_layout Subsubsection
+Vector Interpretation
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\color blue
+Note that this paradox can be interpreted via the geometric meaning of vector
+ addition.
+\end_layout
+
+\end_body
+\end_document
