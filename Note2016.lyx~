@@ -1,0 +1,514 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass ctex-book
+\begin_preamble
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 5
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+二零一六年关键词————“好的习惯，好的思考，好的表达”
+\end_layout
+
+\begin_layout Author
+Sadapplelc
+\end_layout
+
+\begin_layout Date
+
+\emph on
+\begin_inset Quotes eld
+\end_inset
+
+
+\color blue
+在那些年月里，我们为了推翻卓越的前辈们，废寝忘食地不知付出了多大的努力。现在的风尚的确与当时不大相同了。眼下，日本围棋界的条件相当优越。比如学棋的场所、学棋的对
+手几乎遍地皆是。然而只有这些，似乎还不足以激发棋手们学习的冲动，因为能让他们感动的东西太少了。或许正是因为年轻棋手们拥有的太多，结果反倒成了他们的不幸。
+\color inherit
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+题记
+\end_layout
+
+\begin_layout Standard
+从2014年初开始用lyx记录自己的经历和想法已有一年，回顾过去一年的所记录的东西，有不少在回头读的时候给我以思考和梳理的契机，以后或许也会有很多值得继续回味以
+及对比总结。新的一年，我决定继续记录下去。
+\end_layout
+
+\begin_layout Standard
+在2014年头我说过，心底最想达成的想法是——
+\color blue
+磨练好的气质和条件反射，积累重要的技能，成为更好的人
+\color inherit
+。那么在新年初我必须思考这些想法里面究竟哪些完成了，哪些没有完成。先简单列出去年的陈述：
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\color black
+什么样的气质是好的呢？
+\end_layout
+
+\begin_layout Itemize
+判断准确、取舍豁达、之后的行动迅速而不拖泥带水（所谓“智与勇”）
+\end_layout
+
+\begin_layout Itemize
+锲而不舍地专注，不找到自己的正解决不罢休（所谓“大力”）
+\end_layout
+
+\begin_layout Itemize
+耐心、平常心（所谓“恬淡”）
+\end_layout
+
+\begin_layout Itemize
+善于控制和调整自我
+\end_layout
+
+\begin_layout Itemize
+和强者交往，和别人做有益的分享和交流
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+什么样的条件反射是好的呢？
+\end_layout
+
+\begin_layout Itemize
+做任何事的时候都明白“心”、“技”、“体”三位一体，密不可分。
+\end_layout
+
+\begin_layout Itemize
+一件事，重要吗？急迫吗？问自己
+\end_layout
+
+\begin_layout Itemize
+问好的问题，形成好的感觉比盲目地做事更重要
+\end_layout
+
+\begin_layout Itemize
+永远惜时、惜人、惜福
+\end_layout
+
+\begin_layout Itemize
+很多事都可以分解清楚再来做，找到正确的顺序来安排！
+\end_layout
+
+\begin_layout Itemize
+追二兔不得一兔，所以，一心一意（新注：
+\emph on
+\color blue
+Less is more
+\emph default
+\color inherit
+）
+\end_layout
+
+\begin_layout Itemize
+勤能补拙
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+什么样的技能（对于现在的我来说）是重要的技能？
+\end_layout
+
+\begin_layout Itemize
+熟练掌握R，尽快学习、熟悉C++、Python、SAS等有用的语言
+\end_layout
+
+\begin_layout Itemize
+Latex（Lyx）、Texmacs等学术写作软件的熟练运用（比如，用以CV的写作）
+\end_layout
+
+\begin_layout Itemize
+Excel要相对熟悉
+\end_layout
+
+\begin_layout Itemize
+金融和数据挖掘领域的知识积累
+\end_layout
+
+\begin_layout Itemize
+清晰准确地表达自己观点
+\end_layout
+
+\begin_layout Standard
+气质和条件反射上，没有哪点可以说是有彻底改变的，所以依旧是新年努力的方向。不过对于“条件反射”的说法，我在新年里愿意用更广泛的“习惯”一词来称呼。在过去的一年里
+，我阅读了
+\emph on
+<The Power of Habits
+\emph default
+>一书，对习惯的形成以及如何改变有了了解。后又经由回来和父母亲的对话，深切意识到了新年里改变和形成一些习惯的必要性。很多习惯，不去养成就迟了，而一旦养成，则收益
+终生。我还想去做一个好丈夫好父亲好儿子，所以必须把这件事当成最重要的事去做了！
+\end_layout
+
+\begin_layout Standard
+那么这里仅列出几个新年里想去锲而不舍形成的
+\emph on
+\color red
+好习惯
+\emph default
+\color inherit
+：
+\end_layout
+
+\begin_layout Subsection
+好习惯举例
+\end_layout
+
+\begin_layout Itemize
+早起一杯水，十分钟锻炼。记得搽脸！
+\end_layout
+
+\begin_layout Itemize
+睡前脑海里放电影，加强视觉记忆。
+\end_layout
+
+\begin_layout Itemize
+坚持critical thinking，比如说if...then...就是去年学到的一个很好的思维模式。
+\end_layout
+
+\begin_layout Itemize
+每天给自己一点沉思的时间，
+\emph on
+\color blue
+留意有趣以及有用的事物
+\emph default
+\color inherit
+。傅斯年说要有3个小时，我想我怎么也能给自己二十分钟吧！
+\end_layout
+
+\begin_layout Itemize
+每天做一点编程/解题练习。
+\end_layout
+
+\begin_layout Itemize
+持续积累
+\emph on
+\color blue
+衣食住行
+\emph default
+\color inherit
+四方面的收获，更懂得穿着，并穿出自己的气质：）
+\end_layout
+
+\begin_layout Itemize
+规律地减重瘦身（主要是瘦小腹，练腹肌），这点应该和吃结合起来。如果成功，对上一点的穿着也会有帮助！
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+把自我表达还有沟通、组织能力当成最重要的能力来提高。
+\end_layout
+
+\begin_layout Itemize
+各种途径收集、了解还有分析就业相关的信息，根据这些情况来学习必要技能。时不时地改自己的简历。
+\end_layout
+
+\begin_layout Itemize
+请好好刷牙！
+\end_layout
+
+\begin_layout Standard
+至于技能方面，应该说去年折腾了不少事情，主要集中在CS的东西上，也在那方面形成了一些好的习惯/条件反射。不过必须指出去年我所折腾的东西很多是在工具使用技巧上，比
+如Emacs, Vim, Git/Github, Jekyll等等，但是我后来意识到
+\emph on
+\color blue
+工具的使用技巧很多时候是次要的，更关键的是对于原理的理解和熟练运用
+\emph default
+\color inherit
+。新年里我会更多地去折腾这些方面，新学一到两门语言（暂定Python必学，C++选学），编写大量的程序并同时进行算法的学习！
+\end_layout
+
+\begin_layout Standard
+关于技能，今年我另外该强调的是
+\emph on
+\color blue
+金融市场的知识和数据挖掘的实践
+\emph default
+\color inherit
+。ESL是今年我一定会反复阅读的一本书！
+\end_layout
+
+\begin_layout Standard
+去年我希望自己“坐下来能写（思），站起来能说”。前半句我完成了一半（我能写了！），后半句正和前面所列习惯里所说的“自我表达”相关。我不会再畏惧和回避和别人的各种
+交流（面对面，电话，etc），相反，新年里我希望通过这些各种各样的与人交流来提高自己的表达和沟通能力，练就更好的口才，能够在边和别人对话的同时进行思考，并有能力
+给出敏锐的见解！即使会遇到话不投机或者不喜欢的人，我认为也是很好的锻炼自己应变还有了解人性的机会！
+\end_layout
+
+\begin_layout Standard
+去年的题记里，我提《劝学》是让自己好好体会“吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾
+也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。”这一段。今年我愿意再提《劝学》，所不同的是，我希望强调的是
+另一段——“故不积跬步，无以至千里；不积小流，无以成江海。骐骥一跃，不能十步；驽马十驾，功在不舍。锲而舍之，朽木不折；锲而不舍，金石可镂。蚓无爪牙之利，筋骨之强
+，上食埃土，下饮黄泉，用心一也。蟹六跪而二螯，非蛇鳝之穴无可寄托者，用心躁也。”，其实也就是
+\emph on
+\color blue
+“习惯的力量
+\emph default
+\color inherit
+”还有
+\emph on
+\color blue
+“平常心”
+\emph default
+\color inherit
+。
+\end_layout
+
+\begin_layout Standard
+最后，用一句话来小结今年心底最想达成的想法吧——
+\color blue
+形成
+\emph on
+\color red
+很多好习惯
+\emph default
+\color blue
+，找一份好实习，做好毕业该做的Research
+\color inherit
+。
+\end_layout
+
+\begin_layout Chapter
+Jan
+\end_layout
+
+\begin_layout Section
+1.4
+\end_layout
+
+\begin_layout Standard
+（一） 三毛和荷西之间隔了六年、一场大雪、千万座城和一片沙漠。 六年后，三毛重回马德里。 荷西在背后紧紧抱她，三毛问他：“现在，如果我跟你说我要嫁给你，是不是太
+晚了？” 荷西满眼泪水望着她：“一点也不晚。” 
+\end_layout
+
+\begin_layout Standard
+（二） 姚晨和凌潇肃04年在民政局领了结婚证，那个时候她还不是郭芙蓉。 2010年《和空姐同居的日子》里，她是老凌的媳妇冉静，他是老姚的丈夫陆飞。
+ 11年，婚姻走到第7个年头时，她是芒果，他是方磊。 一场大雪被初晨晒暖，所有的一切又还原了本来的模样。 
+\end_layout
+
+\begin_layout Standard
+（三） 宋丹丹经历了四段感情和三次婚姻。 初恋五年，可时间送走了一切。 第一次婚姻，她为英达守口如瓶。 第二次婚姻，曾被她称为最满意的生活，但仍旧走到山穷水尽。
+ 第三次婚姻，她再也不像年轻时那样冲动了。 她说：“原本只想要一个拥抱，不小心多了一个吻，然后你发现需要一张床，一套房，一个证……离婚的时候才想起：你原本只想要
+一个拥抱。” 
+\end_layout
+
+\begin_layout Standard
+（四） 2000年刘烨初识谢娜，三年后两人牵手高调亮相。 他曾对她承诺：“只要谢娜今天说结婚，我明天就娶她。” 可是六年后，刘烨结婚，谢娜哭了整整一晚，新娘不是
+她。 我不是非要等你，只是等了你，我就不能再等别人了。 十一年了，是该忘了。 
+\end_layout
+
+\begin_layout Standard
+（五） 十年前，在吴宗宪的牵线下，蔡依林和周杰伦结缘。 04年“周侯恋”被炒到新的巅峰，蔡依林面对镜头时身单力薄的吐露“没有和周杰伦交往过”。
+ 她唱他写的《倒带》哭到哽咽，她唱“而你总是太晚才明白”，他回“当我最后才明白”。 去年，他的演唱会邀请她做嘉宾，唱到“能不能给我一首歌的时间”时她捧着他的脸。
+ 她等他，远不只一首歌的时间了。 
+\end_layout
+
+\begin_layout Standard
+（六） 39岁的张惠妹，仍在闪光灯前捧着数座奖杯摆好看的pose。 她是阿密特，她是火。 三年的“正妹恋”告吹那天，她把帽子压低，眼角泛潮。 07年，她在唱《如
+果你也听说》时毫无悬念的哽咽。 歌词里说：“跌跌撞撞才明白了许多，等我的人就你一个”。 她现在还是单身，她深爱的男子一直在等她嫁给他。 
+\end_layout
+
+\begin_layout Standard
+（七） 06年阿sa和郑中基在洛杉矶结婚，知道的人并不多。 10年阿sa和郑中基在香港离婚，所有人都知道。 长她十岁的他在发布会上同她一样哭红了眼。
+ 今年，他再接受采访时说，不会跟她再联络了。 
+\end_layout
+
+\begin_layout Standard
+（八） 张国荣对梅艳芳说过，等我们到40岁，你未嫁，我未娶，我们就在一起。 可是后来，他在03年4月1日坠楼殒身，她在同年12月30日肺功能衰竭病逝。
+ 那年，她刚好40岁。 
+\end_layout
+
+\begin_layout Standard
+（九） 玛莎为梁静茹写的《喜悦》里说：“你就是我肩上的天使，在我最不安的时候出现，以你的温暖，辽阔的翅膀紧紧的拥著我。”这是他写给她的情歌。 可是后来梁静茹唱“
+你写给我，我的第一首歌，你和我，十指紧扣，默写前奏，可是那然后呢”。 2010年2月2日，31岁的梁静茹结婚那天穿着漂亮的婚纱在菲律宾长滩岛举办海滩婚礼。她踮脚
+在夕阳垂落在海平面上时与新郎接吻。 可新郎，不是玛莎。 
+\end_layout
+
+\begin_layout Standard
+（十） 我想把这段留给我们。 虽然我们不像上面的任何一对。 你说时间还很多，不知道三年后，我们是否还能像现在这样彼此喜欢。 但我可以等你。 我们退回原点，等这些
+年过去。 等你回来，等你站在我面前。 然后告诉你，这三年里，每天我都在想你。 我爱你。 
+\end_layout
+
+\begin_layout Section
+1.20
+\end_layout
+
+\begin_layout Subsection
+给一同的回信
+\end_layout
+
+\begin_layout Standard
+一同（这么称呼现在有点别扭，我慢慢改）：
+\end_layout
+
+\begin_layout Standard
+首先，我想说，一个人选择单身可能有很多原因：觉得一个人状态不错，没有合适的人，或者不在合适的时间，等等。但不管是哪种，其他任何人都没有权利去强迫她/他开始。就是
+我的老同学里都还有几位非常独立的女性，到现在都还享受着单身的状态（问过她们基本说目前的目标是多赚钱= =），我特别欣赏。而你才二十三呢，完全没有必要因为家庭和周
+围的压力去勉强开始一段恋情。至于我个人，虽然家里在催了，不过也就是在老妈面前说好好好哄哄她，骨子里我不会急，觉得急了更没用，要找一定还是要找自己真的喜欢的，不能
+随便就让他们给介绍了。找不到的话，一个人也有一个人的过法。
+\end_layout
+
+\begin_layout Standard
+总之，在我看来，恋爱/结婚与否，何时开始，和谁开始，这些归根结底应该是一个人的独立选择。虽然因为历史、文化、地域的限制不总是这样，但一个人发自内心地愿意，主动地
+做出的选择，在大部分时候都要比被迫去选择的情况结果要好的多。
+\end_layout
+
+\begin_layout Standard
+你说“这样的相遇真的是很遗憾。我想，如果我们是慢慢熟悉起来，在了解对方的喜恶之后再这样长时间的相处大概会更好一些吧”，前半句在我看来并不是这样。我想，我们这样的
+相遇是奇妙的。其实这个圣诞我本来是想回绝杨叔叔的，而我也确实原定二十三号开车去普度。可不曾想到我那边的朋友临时和我说他要一月七号才从国内回来，我只好把行程改到那
+天。然后二十号左右杨叔叔又给我打了几个电话，挨不过他的热情，最后一次我问他有没有同龄人（当时想不然我一个小辈过去要是面对的都是他这样的长辈咋办），他说有，然后把
+你联系方式告诉我看我能不能和你一起过来。所以才有了之后的相遇，在我看来还真有些奇妙。当然也不是相遇那天就产生了追你的想法，那天只是觉得你是个可爱的小妹子（帮女生
+拎箱子啥的是我向来的作风＝＝），真正有了这个想法是在你们送我礼物的那天晚上（当然后来我也猜到了估计多半是你姐的主意）。
+\end_layout
+
+\begin_layout Standard
+人和人的相遇很难预先设定一种方式，更别说是最好的那种了。我们既然这样相遇，那就是缘分。不管命运如何流变，我会去把握我所能把握的，我想，到回首的时候，我们一定已经
+成为了相知相惜的朋友。所以啊，哪有什么相遇的遗憾，我们的相知才刚刚开始呢。
+\end_layout
+
+\begin_layout Standard
+你说你”太过冷漠“，首先我并不觉得，其次能消融冷漠的不也就只有热情吗？难道要以冷漠对冷漠？不管是恋人的相处还是朋友相处，出现了问题，总有一个人要主动先走出一步才
+能解决问题。至于”慢热“，可解者唯有时间和相伴。
+\end_layout
+
+\begin_layout Standard
+你还提到了恋爱的可行性。我理解
+\series bold
+\emph on
+你觉得
+\series default
+\emph default
+不可行的最主要原因一是还不真正的了解对方，二是地点——你决定了回国，而我目前在美国好好的，两人很难在一个地方开始。我是这么想的：
+\end_layout
+
+\begin_layout Standard
+我本来就想和你相知，所以去真正的了解对方本就是要做的。所以这个原因并非不可行的绝对理由，我们边接触边了解对方，如果到了某个点我们有了默契，这个自然就不是问题了。
+至于地点，这个有可能成为不可行的绝对理由，因为两个人最后若不能长时间在一起，谈什么恋爱嘛！所以在我的理解，可行与否关键在于地点。不知你是否同意。
+\end_layout
+
+\begin_layout Standard
+其实我有回国的想法很久了，自从两三年前我想清楚毕业后不做学术去业界之后，毕业后长期留美对我的意义就不大了，因为文化上我真的对美国没啥留恋的，也就只有做学术让我觉
+得非在美国不可。在遇到你之前我的想法就是毕业后如果这边有好的offer那就工作一两年回去，不会拖到三五年；如果没有好的offer那就直接回国，理想的城市是珠三角
+那三个以及上海（北京的雾霾让我没那么想去），珠三角是因为离家近同学朋友多，上海是因为如果去那边做金融的话有不少好的connection能用上。当然我也想到了唯一
+的变数——未来可能的那位姑娘，如果她是想留美的，那我想我也会决定留美；当然如果她想回国，那自然就按之前回国的想法走。我不知道你回国后最想去哪，现在你也不必告诉我
+，因为我们还不熟：）我和你说我的想法是想告诉你，如果我们在一起然后我回国了，也并没有为你特别放弃什么牺牲什么，你完全没有需要心里过不去的地方。
+\end_layout
+
+\begin_layout Standard
+说到这我想可以理一理了。你觉得现在的状态就很舒服，我其实也觉得我自己现在一个人的状态不错（虽然能和喜欢的姑娘开始是更让人开心的）。目前至少我们可以在做朋友的过程
+中去把可行性中的第一个问题解决掉。最后能不能两个都解决，使你觉得可行，那我就尽人事而安天命吧。
+\end_layout
+
+\begin_layout Standard
+既然试图去解决，那我自然就要提议咯。我不知道你现在想何时回国，我就假设在四五月吧。那这样的话在你回国前大概还有三个月，三个月中我觉得你应该抓紧时间再去多看看美帝
+的大好河山。我现在上班是part time，所以每两周出去走走都是有时间的。在美东这边自然风光的话尼亚加拉大瀑布，仙那度(DC附近）、大烟山（田纳西州）国家公园
+都很不错，大瀑布之前听你是想去的，而实际上这三处我都没有去过。我想在三个月中，我推荐你可以考虑二月或者三月去尼亚加拉大瀑布，四月初樱花节的时候去DC看看樱花然后
+顺道去仙那度。至于大烟山，五六月份的时候那儿有共鸣萤火虫的festival（而且从我们新泽西这去那的路上可以开美国最漂亮的国家景观公路——蓝岭高速），可如果你回
+国的话我不知道你来不来得及了＝＝　你可以约上你的一个同学或者朋友（如果住店正好你们share），然后我们三或四个人（我也可以再叫上一个我的朋友和我share房间
+）一起road trip这几个地方。至于小一点的地方，我之前也和你提了普林斯顿值得一看，这个地儿等你从LA回来后咱随便找一周周四到周末的时间就能带你当天游遍。
+\end_layout
+
+\begin_layout Standard
+远一点美西的话我去过的地方不少（我主要是和基友刷国家公园去的），如果你有想去但还没去的也可以告诉我，我刚说了我现在part time，每两周都有一周的时间可以自
+己支配，只要合理的计划，去西部也是没问题的。
+\end_layout
+
+\begin_layout Standard
+平时的话如果周末你有空我也想约你吃饭或者去看看其他的（比如百老汇看剧）。
+\end_layout
+
+\begin_layout Standard
+恩，能想到的暂时就这么多。相信我现在的想法通过这信都能传达到了。
+\end_layout
+
+\end_body
+\end_document
